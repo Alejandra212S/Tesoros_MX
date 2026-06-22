@@ -1,0 +1,607 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f6f1e9;
+    color: #2f2f2f;
+    line-height: 1.6;
+}
+
+/* LOGIN Y REGISTRO */
+
+.body-auth {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
+                url("img/inicio2.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-auth {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.tarjeta-auth {
+    background-color: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.tarjeta-auth h1 {
+    text-align: center;
+    color: #2a9d8f;
+    margin-bottom: 8px;
+}
+
+.tarjeta-auth h2 {
+    text-align: center;
+    color: #264653;
+    margin-bottom: 22px;
+}
+
+.tarjeta-auth label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #264653;
+}
+
+.tarjeta-auth input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #2a9d8f;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    font-size: 15px;
+}
+
+.tarjeta-auth button {
+    width: 100%;
+    padding: 13px;
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.tarjeta-auth button:hover {
+    background-color: #264653;
+}
+
+.tarjeta-auth p {
+    text-align: center;
+    margin-top: 18px;
+}
+
+.tarjeta-auth a {
+    color: #2a9d8f;
+    font-weight: bold;
+}
+
+/* PÁGINA PRINCIPAL */
+
+.hero {
+    min-height: 88vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.58)),
+                url("img/inicio4.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.navbar {
+    width: 90%;
+    margin: auto;
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2 {
+    font-size: 28px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #ffd166;
+}
+
+.btn-salir {
+    background-color: #e76f51;
+    color: white;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-salir:hover {
+    background-color: #c44536;
+}
+
+.hero-content {
+    width: 90%;
+    margin: auto;
+    min-height: 68vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 58px;
+    max-width: 850px;
+    margin-bottom: 18px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    max-width: 700px;
+    margin-bottom: 24px;
+}
+
+.btn-principal {
+    background-color: #ffd166;
+    color: #2f2f2f;
+    padding: 14px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+.btn-principal:hover {
+    background-color: #f4a261;
+    transform: scale(1.05);
+}
+
+.introduccion,
+.destinos,
+.consejos {
+    width: 90%;
+    margin: auto;
+    padding: 36px 0;
+}
+
+.introduccion h2,
+.destinos h2,
+.consejos h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 16px;
+    color: #264653;
+}
+
+.introduccion p {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+.grid-destinos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 18px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 18px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #2f2f2f;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.14);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.imagen-card {
+    height: 190px;
+    background-size: cover;
+    background-position: center;
+}
+
+.bacalar {
+    background-image: url("img/bacalar.jpg");
+}
+
+.tolantongo {
+    background-image: url("img/tolantongo.jpg");
+}
+
+.xilitla {
+    background-image: url("img/xilitla.jpg");
+}
+
+.real {
+    background-image: url("img/real-catorce.jpeg");
+}
+
+.hierve {
+    background-image: url("img/hierve-agua.jpg");
+}
+
+.coloradas {
+    background-image: url("img/las-coloradas.jpg");
+}
+
+.contenido-card {
+    padding: 22px;
+}
+
+.contenido-card h3 {
+    color: #264653;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.ubicacion {
+    color: #2a9d8f;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.btn-info {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 10px 18px;
+    background-color: #2a9d8f;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.consejos {
+    background-color: white;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.grid-consejos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.grid-consejos div {
+    background-color: #f6f1e9;
+    padding: 22px;
+    border-radius: 15px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+.grid-consejos h3 {
+    color: #264653;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #264653;
+    color: white;
+}
+
+/* PÁGINAS DE CADA LUGAR */
+
+.header-lugar {
+    color: white;
+    min-height: 58vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.overlay-lugar {
+    background: linear-gradient(rgba(10, 35, 45, 0.48), rgba(10, 35, 45, 0.66));
+    min-height: 58vh;
+}
+
+.portada-lugar {
+    width: 90%;
+    margin: auto;
+    padding: 42px 0 30px;
+    text-align: center;
+    display: flex;
+    min-height: calc(58vh - 70px);
+    flex-direction: column;
+    justify-content: center;
+}
+
+.portada-lugar h1 {
+    font-size: 52px;
+    margin-bottom: 8px;
+}
+
+.portada-lugar .estado {
+    font-size: 22px;
+    color: #ffd166;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.resumen-lugar {
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #f4f4f4;
+}
+
+.contenido-lugar {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+    padding: 32px 0 42px;
+}
+
+.texto-presentacion {
+    margin-bottom: 22px;
+    font-size: 18px;
+}
+
+.texto-presentacion p {
+    margin-bottom: 12px;
+}
+
+.tarjetas-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin: 18px 0 26px;
+}
+
+.tarjeta-detalle {
+    background-color: white;
+    padding: 22px;
+    border-radius: 18px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.tarjeta-detalle:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-detalle h3 {
+    color: #264653;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.tarjeta-detalle p {
+    font-size: 16px;
+}
+
+.bloque-dinamico {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 22px;
+    margin-bottom: 24px;
+}
+
+.bloque-texto,
+.bloque-lista {
+    background-color: white;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+}
+
+.bloque-texto h2,
+.bloque-lista h2,
+.galeria-extra h2 {
+    color: #264653;
+    margin-bottom: 12px;
+    font-size: 28px;
+}
+
+.bloque-texto p {
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+.bloque-lista ul {
+    padding-left: 20px;
+}
+
+.bloque-lista li {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.galeria-extra {
+    background-color: white;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+    margin-bottom: 24px;
+}
+
+.grid-extra {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.mini-card {
+    background-color: #f6f1e9;
+    border-radius: 15px;
+    padding: 18px;
+    box-shadow: 0 9px 18px rgba(0,0,0,0.08);
+}
+
+.mini-card h3 {
+    color: #264653;
+    margin-bottom: 10px;
+}
+
+.botones-lugar {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.btn-secundario {
+    background-color: #264653;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-secundario:hover {
+    background-color: #2a9d8f;
+}
+
+/* FONDOS DESDE LA CARPETA IMG */
+
+.bacalar-bg {
+    background-image: url("img/bacalar.jpg");
+}
+
+.tolantongo-bg {
+    background-image: url("img/tolantongo.jpg");
+}
+
+.xilitla-bg {
+    background-image: url("img/xilitla.jpg");
+}
+
+.real-bg {
+    background-image: url("img/real-catorce.jpeg");
+}
+
+.hierve-bg {
+    background-image: url("img/hierve-agua.jpg");
+}
+
+.coloradas-bg {
+    background-image: url("img/las-coloradas.jpg");
+}
+
+@media (max-width: 1100px) {
+    .tarjetas-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-extra {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .grid-destinos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-consejos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bloque-dinamico {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .grid-destinos,
+    .grid-consejos,
+    .tarjetas-info,
+    .grid-extra {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1,
+    .portada-lugar h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p,
+    .resumen-lugar {
+        font-size: 17px;
+    }
+}
+
+#mensajeRegistro {
+    display: none;
+    margin: 15px 0;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#mensajeRegistro.exito {
+    display: block;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#mensajeRegistro.error {
+    display: block;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+

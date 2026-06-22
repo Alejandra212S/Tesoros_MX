@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión | Tesoros MX</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body-auth">
+
+    <section class="contenedor-auth">
+        <div class="tarjeta-auth">
+
+            <h1>Tesoros MX</h1>
+            <h2>Iniciar sesión</h2>
+
+            <form id="formLogin">
+
+                <label>Correo electrónico</label>
+                <input
+                    type="email"
+                    id="loginCorreo"
+                    placeholder="Ingresa tu correo"
+                    required
+                >
+
+                <label>Contraseña</label>
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Ingresa tu contraseña"
+                    required
+                >
+
+                <button type="submit">
+                    Entrar
+                </button>
+
+            </form>
+
+            <p>
+                ¿No tienes cuenta?
+                <a href="registro.html">
+                    Regístrate aquí
+                </a>
+            </p>
+
+        </div>
+    </section>
+
+    <script type="module" src="auth.js"></script>
+
+</body>
+</html>
