@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesoros Escondidos de México</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="protegerPagina()">
+
+    <header class="hero">
+        <nav class="navbar">
+            <h2>Tesoros MX</h2>
+
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#destinos">Destinos</a></li>
+                <li><a href="#consejos">Consejos</a></li>
+                <li>
+                    <button onclick="cerrarSesion()" class="btn-salir">
+                        Salir
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="hero-content">
+            <h1>Tesoros Escondidos de México</h1>
+
+            <p>
+                Bienvenido/a,
+                <span id="nombreUsuario"></span>.
+                Descubre lugares naturales, culturales e históricos que muestran la riqueza menos conocida de México.
+            </p>
+
+            <a href="#destinos" class="btn-principal">
+                Ver destinos
+            </a>
+        </section>
+    </header>
+
+    <main>
+
+        <section class="introduccion">
+            <h2>¿Qué son los tesoros escondidos?</h2>
+
+            <p>
+                Son lugares que no siempre aparecen como los destinos turísticos más populares,
+                pero que destacan por su historia, naturaleza, cultura, paisajes y tradiciones.
+                México cuenta con muchos sitios únicos que vale la pena conocer y cuidar.
+            </p>
+        </section>
+
+        <section id="destinos" class="destinos">
+
+            <h2>Destinos destacados</h2>
+
+            <div class="grid-destinos">
+
+                <a href="bacalar.html" class="card">
+                    <div class="imagen-card bacalar"></div>
+                    <div class="contenido-card">
+                        <h3>Bacalar</h3>
+                        <p class="ubicacion">Quintana Roo</p>
+                        <p>
+                            Pueblo Mágico famoso por su laguna de tonos azules y ambiente tranquilo.
+                        </p>
+                        <span class="btn-info">Ver página</span>
+                    </div>
+                </a>
+
+                <a href="tolantongo.html" class="card">
+                    <div class="imagen-card tolantongo"></div>
+                    <div class="contenido-card">
+                        <h3>Grutas de Tolantongo</h3>
+                        <p class="ubicacion">Hidalgo</p>
+                        <p>
+                            Destino natural con aguas termales, cuevas, río turquesa y paisajes montañosos.
+                        </p>
+                        <span class="btn-info">Ver página</span>
+                    </div>
+                </a>
+
+                <a href="xilitla.html" class="card">
+                    <div class="imagen-card xilitla"></div>
+                    <div class="contenido-card">
+                        <h3>Xilitla</h3>
+                        <p class="ubicacion">San Luis Potosí</p>
+                        <p>
+                            Un lugar donde la selva, el arte surrealista y la cultura local se unen.
+                        </p>
+                        <span class="btn-info">Ver página</span>
+                    </div>
+                </a>
+
+                <a href="real-catorce.html" class="card">
+                    <div class="imagen-card real"></div>
+                    <div class="contenido-card">
+                        <h3>Real de Catorce</h3>
+                        <p class="ubicacion">San Luis Potosí</p>
+                        <p>
+                            Pueblo minero con calles antiguas, historia y paisajes del altiplano.
+                        </p>
+                        <span class="btn-info">Ver página</span>
+                    </div>
+                </a>
+
+                <a href="hierve-agua.html" class="card">
+                    <div class="imagen-card hierve"></div>
+                    <div class="contenido-card">
+                        <h3>Hierve el Agua</h3>
+                        <p class="ubicacion">Oaxaca</p>
+                        <p>
+                            Paisaje natural con cascadas petrificadas y vistas impresionantes.
+                        </p>
+                        <span class="btn-info">Ver página</span>
+                    </div>
+                </a>
+
+                <a href="las-coloradas.html" class="card">
+                    <div class="imagen-card coloradas"></div>
+                    <div class="contenido-card">
+                        <h3>Las Coloradas</h3>
+                        <p class="ubicacion">Yucatán</p>
+                        <p>
+                            Lugar famoso por sus aguas rosadas y paisajes únicos de salinas.
+                        </p>
+                        <span class="btn-info">Ver página</span>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+
+        <section id="consejos" class="consejos">
+
+            <h2>Consejos para visitar estos lugares</h2>
+
+            <div class="grid-consejos">
+
+                <div>
+                    <h3>Respeta la naturaleza</h3>
+                    <p>
+                        No tires basura y evita dañar plantas, agua o formaciones naturales.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Apoya lo local</h3>
+                    <p>
+                        Compra comida, artesanías o servicios de comunidades cercanas.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Infórmate antes de ir</h3>
+                    <p>
+                        Consulta horarios, clima, costos, reglamentos y accesos.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Viaja con responsabilidad</h3>
+                    <p>
+                        Respeta la cultura, costumbres y espacios de cada comunidad.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Tesoros Escondidos de México</p>
+    </footer>
+
+    <script type="module" src="auth.js"></script>
+
+</body>
+</html>     
