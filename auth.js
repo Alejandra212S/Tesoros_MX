@@ -1,9 +1,9 @@
 import { auth } from "./firebase.js";
 
 import {
-signInWithEmailAndPassword,
-signOut,
-onAuthStateChanged
+    signInWithEmailAndPassword,
+    signOut,
+    onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
 
 // =========================
@@ -14,99 +14,95 @@ const formLogin = document.getElementById("formLogin");
 
 if (formLogin) {
 
-```
-formLogin.addEventListener("submit", async (e) => {
+    formLogin.addEventListener("submit", async (e) => {
 
-    e.preventDefault();
+        e.preventDefault();
 
-    const correo =
-        document.getElementById("loginCorreo").value.trim();
+        const correo =
+            document.getElementById("loginCorreo").value.trim();
 
-    const password =
-        document.getElementById("loginPassword").value.trim();
+        const password =
+            document.getElementById("loginPassword").value.trim();
 
-    try {
+        try {
 
-        const credencial =
-            await signInWithEmailAndPassword(
-                auth,
-                correo,
-                password
+            const credencial =
+                await signInWithEmailAndPassword(
+                    auth,
+                    correo,
+                    password
+                );
+
+            localStorage.setItem(
+                "sesionActiva",
+                JSON.stringify({
+                    uid: credencial.user.uid,
+                    correo: credencial.user.email
+                })
             );
 
-        localStorage.setItem(
-            "sesionActiva",
-            JSON.stringify({
-                uid: credencial.user.uid,
-                correo: credencial.user.email
-            })
-        );
+            alert("Inicio de sesión exitoso");
 
-        alert("Inicio de sesión exitoso");
+            // REDIRECCION A PRIM.HTML
+            window.location.href = "prim.html";
 
-        window.location.href = "login.html";
+        } catch (error) {
 
-    } catch (error) {
+            console.error("Error Login:", error);
 
-        console.error("Error Login:", error);
+            alert("Correo o contraseña incorrectos");
 
-        alert("Correo o contraseña incorrectos");
+        }
 
-    }
-
-});
-```
+    });
 
 }
 
 // =========================
-// PROTEGER PAGINA
+// PROTEGER PAGINAS
 // =========================
 
 window.protegerPagina = function () {
 
-```
-onAuthStateChanged(auth, (user) => {
+    onAuthStateChanged(auth, (user) => {
 
-    if (!user) {
+        if (!user) {
 
-        window.location.href = "login.html";
+            window.location.href = "login.html";
 
-    } else {
+        } else {
 
-        const nombreUsuario =
-            document.getElementById("nombreUsuario");
+            const nombreUsuario =
+                document.getElementById("nombreUsuario");
 
-        if (nombreUsuario) {
+            if (nombreUsuario) {
 
-            nombreUsuario.textContent =
-                user.email;
+                nombreUsuario.textContent =
+                    user.email;
+
+            }
 
         }
 
-    }
-
-});
-```
+    });
 
 };
 
 // =========================
-// REDIRECCION SI YA INICIO SESION
+// SI YA INICIO SESION,
+// NO VOLVER A LOGIN
 // =========================
 
 onAuthStateChanged(auth, (user) => {
 
-```
-if (
-    user &&
-    window.location.pathname.includes("login.html")
-) {
+    if (
+        user &&
+        window.location.pathname.includes("login.html")
+    ) {
 
-    window.location.href = "prim.html";
+        window.location.href = "prim.html";
 
-}
-```
+    }
 
 });
 
@@ -116,20 +112,18 @@ if (
 
 window.cerrarSesion = async function () {
 
-```
-try {
+    try {
 
-    await signOut(auth);
+        await signOut(auth);
 
-    localStorage.removeItem("sesionActiva");
+        localStorage.removeItem("sesionActiva");
 
-    window.location.href = "login.html";
+        window.location.href = "login.html";
 
-} catch (error) {
+    } catch (error) {
 
-    console.error("Error al cerrar sesión:", error);
+        console.error("Error al cerrar sesión:", error);
 
-}
-```
+    }
 
 };
