@@ -44,7 +44,7 @@ formLogin.addEventListener("submit", async (e) => {
 
         alert("Inicio de sesión exitoso");
 
-        window.location.href = "prim.html";
+        window.location.href = "login.html";
 
     } catch (error) {
 
